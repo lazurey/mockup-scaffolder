@@ -4,11 +4,11 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
-  return gulp.src('./src/sass/*.scss')
+  return gulp.src('./src/sass/*.+(scss|sass)')
     .pipe(sass())
     .on('error', function(err) {
       console.log(err);
-      this.emit('end')
+      this.emit('end');
     })
     .pipe(autoprefixer({
       browsers: ['ie 8-9', 'last 2 versions']
@@ -23,6 +23,10 @@ gulp.task('templates', function() {
     .pipe(jade({
       locals: YOUR_LOCALS
     }))
+    .on('error', function(err) {
+      console.log(err);
+      this.emit('end');
+    })
     .pipe(gulp.dest('./public/'))
 });
 
