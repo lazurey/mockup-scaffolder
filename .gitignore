@@ -1,0 +1,25 @@
+# Logs
+logs
+*.log
+
+# dependencies
+node_modules
+
+# generated files
+public
+
+# OSX
+.DS_Store
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# other things
+*.tmp
+*.swp
+.idea
+
+# ignore for now
+src/sass/base/bootstrap.css
