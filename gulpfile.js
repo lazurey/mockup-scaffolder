@@ -19,7 +19,9 @@ gulp.task('sass', function() {
 gulp.task('templates', function() {
   var YOUR_LOCALS = {};
  
-  gulp.src(['./src/templates/**/*.jade', '!./src/templates/partials/*.jade'])
+  gulp.src(['./src/templates/**/*.jade',
+            '!./src/templates/partials/*.jade',
+            '!./src/templates/layout/*.jade'])
     .pipe(jade({
       locals: YOUR_LOCALS
     }))

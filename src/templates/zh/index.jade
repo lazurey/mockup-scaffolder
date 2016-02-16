@@ -1,16 +1,9 @@
-doctype html
+extends ../layout/page-zh.jade
+
 html(lang="zh")
   head
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    link(href='assets/css/main.css', rel='stylesheet')
-    title= 首页
-  body
-    include ../partials/nav.jade
-    .container
-      h1 Hello World
-      p 你好世界
-      p.
-        这个世界还好吗？
-    include ../partials/footer.jade
+    block headtitle
+      title= 首页
+
+block content
+  h1 中文版首页

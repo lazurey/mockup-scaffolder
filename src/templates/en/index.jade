@@ -1,16 +1,9 @@
-doctype html
+extends ../layout/page-en.jade
+
 html(lang="en")
   head
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(charset='utf-8')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    link(href='assets/css/main.css', rel='stylesheet')
-    title= Homepage
-  body
-    include ../partials/nav.jade
-    .container
-      h1 Hello World
-      p Hello
-      p.
-        Is this world still okay?
-    include ../partials/footer.jade
+    block headtitle
+      title= Homepage
+
+block content
+  h1 English Version Homepage

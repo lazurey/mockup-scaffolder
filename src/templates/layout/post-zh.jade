@@ -1,0 +1,16 @@
+doctype html
+html(lang="en")
+  head
+    include ../partials/head.jade
+    block headtitle
+      title= Homepage
+  body
+    block nav
+      include ../partials/nav-zh.jade
+
+    block content
+      .container
+        h1 Post Template
+
+    block footer
+      include ../partials/footer-zh.jade
